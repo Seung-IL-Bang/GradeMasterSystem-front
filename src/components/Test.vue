@@ -26,6 +26,7 @@ export default {
 
   watch: {
     // => 데이터 변경 이후 발동
+    // => 데이터가 변경이 일어나는 곳: computed, methods
     a(newVal, oldVal) {
       console.log('watch callback') // 13, 19
       console.log(oldVal, '->', newVal) // 14, 20
