@@ -4,8 +4,10 @@
     <Header></Header> <!--배너-->
 
     <nav>
-      <RouterLink to="/student">Student</RouterLink> <!--학생 페이지-->
-      <RouterLink to="/professor">Professor</RouterLink> <!--교수 페이지-->
+      <RouterLink to="/student">Student</RouterLink> <!--학생 조회 페이지-->
+      <RouterLink to="/exam">Exam</RouterLink>
+      <RouterLink to="/professor">Professor</RouterLink> <!--교수 조회 페이지-->
+      <RouterLink to="/test">Test</RouterLink>
     </nav>
   </div>
 
