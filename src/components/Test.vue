@@ -1,18 +1,25 @@
 <template>
 <h1>test</h1>
+<div>{{ this.stub }}</div>
 </template>
 
 <script>
 
 export default {
 
-  /*
+  /* hook 흐름도
     setup() => data() => created() => mounted()
   */
 
   setup() { 
     console.log('setup() !!!') // 1
     //this.test2() // computed 사용 불가; error 발생
+  },
+
+  props: {
+    // => 사용 가능 영역: data(), created(), mounted()
+    // => 사용 불가 영역: setup() undefined error
+    stub: String
   },
 
   data() {
@@ -72,6 +79,7 @@ export default {
     // => 사용 불가 영역: setup(), 
     test(when) {
       console.log('methods !!!', when)
+      console.log('props: ', this.stub)
     },
     test2() {
       console.log(this.decorator) // 17
